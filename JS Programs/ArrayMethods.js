@@ -42,3 +42,7 @@ const res2 = num.map((item) => item * 2)
 // Note  map(transform) vs filter(condition)
 // Creates a new array with the same length as the original array, but with each element transformed by the callback function.
 // Creates a new array with only the elements that pass the conditions implemented by the callback function.
+
+//arr.reduce(fn(acc,item,index,arr))
+const total = [0, 1, 2, 3].reduce((sum, value) => sum + value, 1);
+

@@ -1,0 +1,143 @@
+1. Write a JavaScript function to capitalise the first letter of each word in a string.
+Test data: "js string exercises"
+Expected output: "Js String Exercises"
+
+3. Write a function called vowelCount which accepts a string and returns a Map where the
+keys are vowel and the values are the count of the vowels in the string.
+Test data: Colt
+Expected output: Map { 'o' => 1 }
+
+4. Sort below array of objects by age values
+Test Data:
+[
+{ name: "Ram", age: 17 },
+{ name: "Mohan", age: 30 },
+{ name: "Shyam", age: 15 },
+{ name: "Shyam", age: 17 },
+]
+Expected Output:
+[
+{ name: 'Shyam', age: 15 },
+{ name: 'Ram', age: 17 },
+{ name: 'Shyam', age: 17 },
+{ name: 'Mohan', age: 30 }
+]
+
+
+5. person = [
+{ name: "Ram", age: 17, bdate: "12/06/2005", city: "Pune" },
+{ name: "Shyam", age: 17, bdate: "17/01/2024", city: "Delhi" },
+{ name: "Mohan", age: 30, bdate: "23/10/1998", city: "Mumbai" },
+{ name: "Shyam", age: 15, bdate: "29/04/1985", city: "Kolkata" },
+]
+display only those persons whose birthday is today.
+remove all the persons whose are under 18.
+
+
+6. Show if square of number exists in same array
+Test Data: [1,2,625,4,99,5,16,25,17,789,20,6,36,100]
+Expected Output:
+number 1 => squared number 1
+number 2 => squared number 2    
+
+7. heros array to return a new array.
+The new array should rename the 'name' key to 'hero'.
+The 'name' key should not appear in the new array.
+The new array should have a new key added called (id).
+The key 'id' should be based on the index.
+const heros = [
+{ name: 'Spider-Man' },
+{ name: 'Thor' },
+{ name: 'Black Panther' },
+{ name: 'Captain Marvel' },
+{ name: 'Silver Surfer' }
+];
+Expected output (array of objects):
+[
+{ id: 0, hero: 'Spider-Man' },
+{ id: 1, hero: 'Thor' },
+{ id: 2, hero: 'Black Panther' },
+{ id: 3, hero: 'Captain Marvel' },
+{ id: 4, hero: 'Silver Surfer' }
+]
+
+8. filter even numbers then square them. Assign the result to a variable named
+squaredEvenNums and display it.
+let nums = [11, 22, 33, 46, 75, 86, 97, 98];
+Expected output :
+squaredEvenNums: [484, 2116, 7396, 9604]
+
+
+
+9. Write a program to merge two JSON objects into one. Use the following two JSON objects:
+object 1 = { "name": "John Doe", "age": 30 }
+object 2 = { "address": { "street": "123 Main St", "city": "Anytown", "state": "CA", "zip": "12345" }
+}
+Merge the two objects into one.
+Print the merged object to the console.
+
+10. Implement a function that takes an array of objects as input and returns a new array
+containing only the objects that have a property with a specific value.
+Example input and output:
+const users = [
+{ name: 'John', age: 30 },
+{ name: 'Mary', age: 25 },
+{ name: 'Bob', age: 40 }
+];
+filterObjects(users, 'age', 30);
+Expected Output: [{ name: 'John', age: 30 }]
+
+11. Implement a function that takes an array of integers as input and returns the maximum
+difference between any two elements in the array. If there are less than two elements in the
+array, return null.
+Test Data -> maxDiff([2, 5, 7, 1, 9, 3]);
+Expected Output -> 8
+
+
+
+12. 3. Write a JavaScript function to get the first element of an array. Passing the parameter 'n'
+will return the first 'n' elements of the array.
+Test Data :
+console.log(first([7, 9, 0, -2]));
+console.log(first([],3));
+console.log(first([7, 9, 0, -2],3));
+console.log(first([7, 9, 0, -2],6));
+console.log(first([7, 9, 0, -2],-3));
+Expected Output :
+7
+[]
+[7, 9, 0]
+[7, 9, 0, -2]
+[]
+
+
+13. Write a JavaScript program that accepts a number as input and inserts dashes (-) between
+each even number.
+Test Data -> 025468
+Expected output -> 0-254-6-8.
+
+14. Write a JavaScript program that accepts a string as input and swaps the case of each
+character.
+String -> 'Javascript IS nOt ReLated TO JAva.'
+Expected output -> 'jAVASCRIPT is NoT rElATED to jaVA.
+
+15. Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values
+from an array.
+Test array -> [NaN, 0, 15, false, -22, '',undefined, 47, null]
+Expected output -> [15, -22, 47]
+
+16. Write a JavaScript program to find a pair of elements (indices of the two numbers) in a
+given array whose sum equals a specific target number.
+Test input: [10,20,10,40,50,60,70], target=50
+Expected output: 2, 3
+
+17.students = [
+{ name: "Ram", age: 17, bdate: "12/06/2005", city: "Pune" },
+{ name: "Shyam", age: 17, bdate: "17/01/1989", city: "Delhi" },
+{ name: "Mohan", age: 30, bdate: "23/10/2000", city: "Pune" },
+{ name: "Shyam", age: 15, bdate: "29/04/1989", city: "Kolkata" },
+{ name: "Satish", age: 30, bdate: "17/01/1989", city: "Delhi" },
+{ name: "Sundar", age: 15, bdate: "29/04/1989", city: "Surat" },
+];
+Write a javascript program that accept an array and key. It should return a new Object grouped
+by key
