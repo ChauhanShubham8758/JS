@@ -8,23 +8,23 @@
 
 //  2
 // let str = "COeeOlt"
-// console.log(
-//     str.toLowerCase().split("").reduce((acc,curr) =>
-//     {
-//         if(curr==='a' || curr==='e'|| curr==='i' || curr==='o' || curr==='u')
-//         {
-//             if(acc[curr])
-//             {
-//                 acc[curr] = acc[curr] +1;
-//             }
-//             else
-//             {
-//                 acc[curr] =1
-//             }
-//         }
-//         return acc
-//     },{})
-// )
+// const vowels = ["a", "e", "i", "o", "u"];
+// const initialCounts = {
+//     a: 0,
+//     e: 0,
+//     i: 0,
+//     o: 0,
+//     u: 0
+// }
+
+// const counts = str.toLowerCase().split("").reduce((res, char) => {
+//     if(vowels.includes(char)) {
+//         res[char] += 1
+//     }
+//     return res
+// }, initialCounts)
+
+// console.log(counts)
 
 //  3
 // let arr = [
@@ -116,6 +116,15 @@
 //     return maxDifference;
 // }
 
+// const maxDiff = (numbers = []) => {
+//     if (numbers.length < 2)
+//         return null;
+
+//     const minNumber = Math.min(...numbers);
+//     const maxNumber = Math.max(...numbers);
+//     return maxNumber - minNumber;
+// }
+
 // console.log(maxDiff([2, 5, 7, 1, 9, 3]));
 
 //11
@@ -156,32 +165,55 @@
 //     return inputArray.filter(value => ![null, 0, "", false, undefined, NaN].includes(value));
 // }
 
+// const filterFalsyValues = (values) => values.filter(Boolean);
 // const testArray = [NaN, 0, 15, false, -22, '', undefined, 47, null];
 // console.log(filterFalsyValues(testArray));
 
 //15
 // function findPairWithSum(nums, target) {
-//     const indices = [];
-
-    
 //     for (let i = 0; i < nums.length; i++) 
-//     {
 //         for (let j = i + 1; j < nums.length; j++) 
-//         {
 //             if (nums[i] + nums[j] === target) 
-//             {
-//                 indices.push(i, j);
-//                 return indices;
-//             }
-//         }
-//     }
+//                 return [i, j];
 
 //     return null;
 // }
 
+// const findPair = (nums, target) => nums.reduce((res, num, numIndex, arr) => {
+//     const matchInd = arr.findIndex(elem => elem === target-num);
+//     if (num < target && matchInd !== -1)
+//         return [numIndex, matchInd].join(", ")
+
+//     return res;
+// }, "");
+
 // const inputArray = [10, 20, 10, 40, 50, 60, 70];
 // const targetSum = 50;
-// console.log(findPairWithSum(inputArray, targetSum)); 
+// // console.log(findPairWithSum(inputArray, targetSum)); 
+// console.log(findPair(inputArray, targetSum)); 
 
+// const obj1 = { "name": "John Doe", "age": 30 }
+// const obj2 = { "address": { "street": "123 Main St", "city": "Anytown", "state": "CA", "zip": "12345" }
+// }
+// const res = {...obj1, ...obj2}
+// console.log(res)
 
+// const arr = [
+//   { name: "Ram", age: 17, bdate: "12/06/2005", city: "Pune" },
+//   { name: "Shyam", age: 17, bdate: "17/01/1989", city: "Delhi" },
+//   { name: "Mohan", age: 30, bdate: "23/10/2000", city: "Pune" },
+//   { name: "Shyam", age: 15, bdate: "29/04/1989", city: "Kolkata" },
+//   { name: "Satish", age: 30, bdate: "17/01/1989", city: "Delhi" },
+//   { name: "Sundar", age: 15, bdate: "29/04/1989", city: "Surat" },
+// ];
+
+// const groupBy = (array, key) =>
+//   array.reduce(
+//     (res, obj, _, arr) => ({
+//       ...res,
+//       [obj[key]]: arr.filter((item) => item[key] === obj[key]),
+//     }),
+//     {}
+//   );
+// console.log(groupBy(arr, "age"));
 
